@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_25_154251) do
+ActiveRecord::Schema.define(version: 2020_04_26_165726) do
 
   create_table "pages", force: :cascade do |t|
     t.string "name"
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "label"
+    t.string "data1"
+    t.string "data2"
+    t.string "data3"
+    t.integer "outcome"
   end
 
 end

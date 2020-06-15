@@ -1,14 +1,137 @@
+
+
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @page.name %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Content:</strong>
-  <%= @page.content %>
-</p>
+  <p>
+  	<h1><%= @page.name %></h1>
+  </p>
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+  <hr>
+
+      <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading"><%= @page.content %>. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr>
+
+	<p>
+	  <strong>Financials - Summary</strong>
+	  <%= @page.data1 %>
+	</p>
+
+	  <hr>
+
+<div class="iframe-container">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT97xJwulBoeYp4F9TMA4WNHD78lrFwr7a_q-0oX4cccLL4bwfqBet4E70x5Zc5SVOGlps4c1o4CVGH/pubhtml?widget=true&amp;headers=false"></iframe>
+</div>
+
+<hr>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+				<strong>Notes</strong>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+	    					<%= image_tag("#{@page.data1}", {:style => "width:400px; height: 400px;"}) %>
+	   					</div>
+	    			<div class="carousel-item">
+	      					<%= image_tag("#{@page.data1}", {:style => "width:400px; height: 400px;"}) %>
+	    			</div>
+	  				</div>
+			</div>
+		</div>
+		<div class="col">
+		 	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+	  	  		<strong>?</strong>
+		  			<div class="carousel-inner">
+		    			<div class="carousel-item active">
+		    				<%= image_tag("#{@page.data1}", {:style => "width:400px; height: 400px;"}) %>
+		    			</div>
+		   				<div class="carousel-item">
+		     				<%= image_tag("#{@page.data1}", {:style => "width:400px; height: 400px;"}) %>
+		   				</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<p></p>
+
+  <hr>
+
+	<div class="row">
+		<div class="col">
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  	  			<strong>Ratios 2</strong>
+	  				<div class="carousel-inner">
+	  				  <div class="carousel-item active">
+	  				  	<%= image_tag("#{@page.data1}", {:style => "width:400px; height: 400px;"}) %>
+	  				</div>
+	    				<div class="carousel-item">
+	   					   <%= image_tag("#{@page.data1}", {:style => "width:400px; height: 400px;"}) %>
+	   					</div>
+	  				</div>
+			</div>
+		</div>
+
+		<div class="col">
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  	  			<strong>Du Pont</strong>
+	  				<div class="carousel-inner">
+	  				  <div class="carousel-item active">
+	  				  	<%= image_tag("#{@page.data1}", {:style => "width:400px; height: 400px;"}) %>
+	  				</div>
+	    				<div class="carousel-item">
+	   					   <%= image_tag("#{@page.data1}", {:style => "width:400px; height: 400px;"}) %>
+	   					</div>
+	  				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+
+	<p></p>
+
+		<button type="button" class="btn btn-sm btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+	<p></p>
+
+	<p>
+	  <strong> Would you like to add <%= @page.name %> to your portfolio?</strong>
+	</p>
+
+	<p></p>
+
+	<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Back">Back</button>
+	<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Next">Next</button>
+	<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Buy">Buy</button>
+	<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Sell">Sell</button>
+
+
+
+	<%= link_to 'Edit', edit_page_path(@page) %> |
+	<%= link_to 'Back', pages_path %>
+
+
+
+
+	<!-- <div class="container-fluid">
+		<%= image_tag "balance_sheet.jpg", alt: "balance_sheet" %>
+	</div> -->
+
+
+
+

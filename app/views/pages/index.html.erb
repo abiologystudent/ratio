@@ -1,32 +1,47 @@
+ 
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Hello, speculator!</h1>
+      <p>Speculator is a simple investing game for the learning and application of ratio analysis to financial statements.</p>
+      <p><a class="btn btn-primary btn-sm" href="https://www.investopedia.com/terms/r/ratioanalysis.asp" role="button">Ratio analysis?</a></p>
+    </div>
+  </div>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Pages</h1>
+<div class="container themed-container">
+<!-- a container to contain three columns
+ -->   
+ 
+  <div class="row mb-3">
+    <div class="col-md-8 themed-grid-col">
+      <div class="pb-3">
+        <h1>Market</h1>
+        <!-- could have a date here  or time period-->
+      </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <div class="row">
+      <div class="col-md-4 themed-grid-col"><h2>Company</h2></div>
+      <div class="col-md-8 themed-grid-col"><h2>Latest News</h2></div>
+      <% @pages.each do |page| %>
+      <div class="col-md-4 themed-grid-col"><%= page.name %></div>
+      <div class="col-md-8 themed-grid-col"><%= page.content %> <%= link_to 'Show', page %></div>
+      <% end %>
+      </div>
+    </div>
+    <div class="col-md-4 themed-grid-col"><h1>Portfolio</h1></div>
+  </div>
 
-  <tbody>
-    <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.name %></td>
-        <td><%= page.content %></td>
 
-        <%= image_tag "balance_sheet.jpg", alt: "balance_sheet" %>
-
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</main>
 
 <br>
 
-<%= link_to 'New Page', new_page_path %>
+<%= link_to 'View Balance Sheet', new_page_path %>
+
+</div> 
+<!-- end of container
+ -->
+<!-- new_page_path variable above needs changed to scorecard. A User variable? -->
