@@ -25,7 +25,7 @@
       <div class="row">
       <div class="col-md-4 themed-grid-col"><h2>Company</h2></div>
       <div class="col-md-8 themed-grid-col"><h2>Latest News</h2></div>
-      <% @pages.each do |page| %>
+      <% @page.each do |page| %>
       <div class="col-md-4 themed-grid-col"><%= page.name %></div>
       <div class="col-md-8 themed-grid-col"><%= page.content %> <%= link_to 'Show', page %></div>
       <% end %>
