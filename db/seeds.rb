@@ -9,4 +9,4 @@
 # Added example opportunities for seeding
 
 Page.create(name: 'ACO Inc', content: 'ACO Inc has recently published its annual results.', label: '1', data1: 'balance_sheet.jpg', data2: 'app/assets/images/balance_sheet.jpg', data3: 'assets/images/balance_sheet.jpg', outcome: '10')
-Page.create(name: 'Bee Ltd', content: 'Bee Ltd is facing challenging times.', label: '2', data1: 'Fin Statmenet Pic Here', data2: 'Common Size', data3: 'Ratios', outcome: '-5')
+Page.create(name: 'Bee Ltd', content: 'Bee Ltd is facing challenging times.', label: '2', data1: 'balance_sheet.jpg', data2: 'app/assets/images/balance_sheet.jpg', data3: 'assets/images/balance_sheet.jpg', outcome: '-5')
